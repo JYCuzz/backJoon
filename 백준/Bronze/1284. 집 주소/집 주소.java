@@ -1,5 +1,4 @@
 import java.util.*;
-import java.math.BigInteger;
 
 public class Main {
 
@@ -14,28 +13,27 @@ public class Main {
 	        	System.exit(0);
 	        }
 	        
-	        BigInteger sum1 = BigInteger.valueOf(2);
-
+	        int sum = 2;
 	        
 	        for(int i = 0; i < n.length(); i++) {
 	        	
 	        	if(n.charAt(i) == '1') {
-	        		sum1 = sum1.add(BigInteger.valueOf(2));
+	        		sum += 2;
 	        	}
 	        	else if(n.charAt(i) == '0') {
-	        		sum1 = sum1.add(BigInteger.valueOf(4));
+	        		sum += 4;
 	        	}
 	        	else {
-	        		sum1 = sum1.add(BigInteger.valueOf(3));
+	        		sum += 3;
 	        	}	
 	        }
 	        
 	        if(n.length() >= 2) {
 	        	
-	        	sum1 = sum1.add(BigInteger.valueOf(n.length()-1));
+	        	sum += n.length()-1;
 	        }
 	              
-	        System.out.println(sum1);
+	        System.out.println(sum);
         }
         
     }
