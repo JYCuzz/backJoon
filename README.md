@@ -1,2 +1,3 @@
-# backJoon
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# 백준 - 자바 코딩 연습
+
+열심히 연습하자!
