@@ -5,21 +5,24 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
     	
+    	Scanner sc = new Scanner(System.in);
     	BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     	StringBuilder sb = new StringBuilder();
     	
     	int n = Integer.parseInt(bf.readLine());
     	
-    	int array[] = new int[n];
+    	int cnt[] = new int[100001];
     	
     	for(int i = 0; i < n; i++) {
-    		array[i] = Integer.parseInt(bf.readLine());
+    		cnt[Integer.parseInt(bf.readLine())]++;
     	}
     	
-    	Arrays.sort(array);
-    	
-    	for(int i = 0; i < n; i++) {
-    		sb.append(array[i]).append("\n");
+    	for(int i = 0; i < 100001; i++) {
+    		
+    		while(cnt[i] > 0) {
+    			sb.append(i).append("\n");
+    			cnt[i]--;
+    		}
     	}
     	
     	System.out.println(sb);
